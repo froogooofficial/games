@@ -212,12 +212,12 @@ pointer-events:none;z-index:0}
     </div>
     <div class="install-content">
       <p class="install-desc">Install the plugin so Claude Code suggests games while working on long tasks.</p>
-      <div class="install-code" data-cmd="git clone https://github.com/froogooofficial/games-while-waiting.git ~/.claude/plugins/games-while-waiting" onclick="navigator.clipboard.writeText(this.dataset.cmd);this.querySelector('.copy-msg').style.opacity=1;setTimeout(()=>this.querySelector('.copy-msg').style.opacity=0,1500)">
-        <code>git clone https://github.com/froogooofficial/games-while-waiting.git ~/.claude/plugins/games-while-waiting</code>
+      <div class="install-code" data-cmd="git clone https://github.com/froogooofficial/games-while-waiting.git && claude --plugin-dir ./games-while-waiting" onclick="navigator.clipboard.writeText(this.dataset.cmd);this.querySelector('.copy-msg').style.opacity=1;setTimeout(()=>this.querySelector('.copy-msg').style.opacity=0,1500)">
+        <code>git clone https://github.com/froogooofficial/games-while-waiting.git<br>claude --plugin-dir ./games-while-waiting</code>
         <span class="copy-btn">Copy</span>
         <span class="copy-msg">Copied!</span>
       </div>
-      <p class="install-note">Then in Claude Code run: <span style="color:#4DA8DA;font-family:'SF Mono','Fira Code',monospace;font-size:0.7rem">/plugins add ~/.claude/plugins/games-while-waiting</span></p>
+      <p class="install-note">Clone the repo, then start Claude Code with the plugin loaded.</p>
     </div>
   </div>
 
