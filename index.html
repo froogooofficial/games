@@ -84,6 +84,12 @@ pointer-events:none;z-index:0}
 
 .tag-cards{background:#e879f920;color:#e879f9}
 
+.card-visual.trace{background:linear-gradient(135deg,#0a1020,#101a30);border-bottom:1px solid #38bdf820}
+.card-visual.trace .card-icon{font-size:4rem;filter:drop-shadow(0 0 20px rgba(56,189,248,0.4))}
+.card-visual.trace::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 50% 80%,rgba(56,189,248,0.08),transparent 60%)}
+
+.tag-visual{background:#38bdf820;color:#38bdf8}
+
 .card-visual.ripple{background:linear-gradient(135deg,#050810,#0a1030);border-bottom:1px solid #67e8f920}
 .card-visual.ripple .card-icon{font-size:4rem;filter:drop-shadow(0 0 20px rgba(103,232,249,0.4))}
 .card-visual.ripple::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 50% 80%,rgba(103,232,249,0.08),transparent 60%)}
@@ -288,6 +294,21 @@ pointer-events:none;z-index:0}
       <div class="card-body">
         <div class="card-title">Ripple <span class="card-tag tag-action">Action</span></div>
         <div class="card-desc">Tap a dark pond to create ripples that collect floating lights. But ripples push lights away — time your taps! 60 seconds.</div>
+        <div class="card-play">
+          Play now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- Trace -->
+    <a href="https://froogooofficial.github.io/trace-game/" class="game-card">
+      <div class="card-visual trace">
+        <div class="card-icon">✏️</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Trace <span class="card-tag tag-visual">Visual</span></div>
+        <div class="card-desc">See a pattern on the grid, memorize it, then draw it back. Patterns grow longer and grids expand. How far can you go?</div>
         <div class="card-play">
           Play now
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
