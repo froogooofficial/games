@@ -80,6 +80,23 @@ pointer-events:none;z-index:0}
 .game-card.coming-soon{cursor:default;opacity:0.5}
 .game-card.coming-soon:hover{transform:none;border-color:#1a1a1a;box-shadow:none}
 
+/* Install section */
+.install-section{margin-top:2rem;background:#111;border:1px solid #1a1a1a;border-radius:16px;overflow:hidden}
+.install-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.2rem;cursor:pointer;font-weight:700;font-size:0.95rem;transition:background .2s}
+.install-header:hover{background:#161616}
+.install-chevron{transition:transform .3s;opacity:0.5}
+.install-content.open ~ .install-header .install-chevron,
+.install-content.open + .install-header .install-chevron{transform:rotate(180deg)}
+.install-content{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;padding:0 1.2rem}
+.install-content.open{max-height:300px;padding:0 1.2rem 1.2rem}
+.install-desc{color:#888;font-size:0.8rem;margin-bottom:0.8rem;line-height:1.5}
+.install-code{background:#0a0a0a;border:1px solid #222;border-radius:10px;padding:0.8rem 1rem;position:relative;cursor:pointer;transition:border-color .2s}
+.install-code:hover{border-color:#333}
+.install-code code{font-family:'SF Mono','Fira Code',monospace;font-size:0.7rem;color:#4DA8DA;word-break:break-all;line-height:1.6;display:block;padding-right:3rem}
+.copy-btn{position:absolute;top:0.6rem;right:0.7rem;font-size:0.65rem;font-weight:700;color:#555;background:#1a1a1a;padding:0.25rem 0.6rem;border-radius:6px;pointer-events:none}
+.copy-msg{position:absolute;top:0.6rem;right:0.7rem;font-size:0.65rem;font-weight:700;color:#4ade80;background:#111;padding:0.25rem 0.6rem;border-radius:6px;pointer-events:none;opacity:0;transition:opacity .3s}
+.install-note{color:#555;font-size:0.7rem;margin-top:0.6rem;line-height:1.5}
+
 /* Footer */
 .footer{text-align:center;margin-top:3rem;color:#333;font-size:0.7rem;line-height:2}
 .footer a{color:#555;text-decoration:none}
@@ -185,6 +202,23 @@ pointer-events:none;z-index:0}
       </div>
     </div>
 
+  </div>
+
+  <!-- Claude Code Install -->
+  <div class="install-section" id="claude-code">
+    <div class="install-header" onclick="document.querySelector('.install-content').classList.toggle('open')">
+      <span>🤖 Add to Claude Code</span>
+      <svg class="install-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="install-content">
+      <p class="install-desc">Install the skill so Claude Code suggests games while working on long tasks.</p>
+      <div class="install-code" data-cmd="mkdir -p .claude/skills/games-while-waiting &amp;&amp; curl -sL -o .claude/skills/games-while-waiting/SKILL.md https://raw.githubusercontent.com/froogooofficial/games-while-waiting/main/SKILL.md" onclick="navigator.clipboard.writeText(this.dataset.cmd);this.querySelector('.copy-msg').style.opacity=1;setTimeout(()=>this.querySelector('.copy-msg').style.opacity=0,1500)">
+        <code>mkdir -p .claude/skills/games-while-waiting && curl -sL -o .claude/skills/games-while-waiting/SKILL.md https://raw.githubusercontent.com/froogooofficial/games-while-waiting/main/SKILL.md</code>
+        <span class="copy-btn">Copy</span>
+        <span class="copy-msg">Copied!</span>
+      </div>
+      <p class="install-note">Run in your project root. Claude will suggest a game when it starts a long task.</p>
+    </div>
   </div>
 
   <!-- Footer -->
