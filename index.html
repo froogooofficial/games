@@ -211,13 +211,13 @@ pointer-events:none;z-index:0}
       <svg class="install-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
     </div>
     <div class="install-content">
-      <p class="install-desc">Install the skill so Claude Code suggests games while working on long tasks.</p>
-      <div class="install-code" data-cmd="mkdir -p .claude/skills/games-while-waiting &amp;&amp; curl -sL -o .claude/skills/games-while-waiting/SKILL.md https://raw.githubusercontent.com/froogooofficial/games-while-waiting/main/SKILL.md" onclick="navigator.clipboard.writeText(this.dataset.cmd);this.querySelector('.copy-msg').style.opacity=1;setTimeout(()=>this.querySelector('.copy-msg').style.opacity=0,1500)">
-        <code>mkdir -p .claude/skills/games-while-waiting && curl -sL -o .claude/skills/games-while-waiting/SKILL.md https://raw.githubusercontent.com/froogooofficial/games-while-waiting/main/SKILL.md</code>
+      <p class="install-desc">Install the plugin so Claude Code suggests games while working on long tasks.</p>
+      <div class="install-code" data-cmd="git clone https://github.com/froogooofficial/games-while-waiting.git ~/.claude/plugins/games-while-waiting" onclick="navigator.clipboard.writeText(this.dataset.cmd);this.querySelector('.copy-msg').style.opacity=1;setTimeout(()=>this.querySelector('.copy-msg').style.opacity=0,1500)">
+        <code>git clone https://github.com/froogooofficial/games-while-waiting.git ~/.claude/plugins/games-while-waiting</code>
         <span class="copy-btn">Copy</span>
         <span class="copy-msg">Copied!</span>
       </div>
-      <p class="install-note">Run in your project root. Claude will suggest a game when it starts a long task.</p>
+      <p class="install-note">Then in Claude Code run: <span style="color:#4DA8DA;font-family:'SF Mono','Fira Code',monospace;font-size:0.7rem">/plugins add ~/.claude/plugins/games-while-waiting</span></p>
     </div>
   </div>
 
