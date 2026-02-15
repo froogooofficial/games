@@ -60,6 +60,12 @@ pointer-events:none;z-index:0}
 .card-visual.flood .card-icon{font-size:4rem;filter:drop-shadow(0 0 20px rgba(255,107,107,0.4))}
 .card-visual.flood::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 50% 80%,rgba(255,217,61,0.08),transparent 60%)}
 
+.card-visual.stack{background:linear-gradient(135deg,#1a0f05,#2a1a0a);border-bottom:1px solid #f59e0b20}
+.card-visual.stack .card-icon{font-size:4rem;filter:drop-shadow(0 0 20px rgba(245,158,11,0.4))}
+.card-visual.stack::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 50% 80%,rgba(245,158,11,0.08),transparent 60%)}
+
+.tag-timing{background:#f59e0b20;color:#f59e0b}
+
 /* Coming soon card */
 .card-visual.soon{background:#0d0d0d;border-bottom:1px solid #ffffff08}
 .card-visual.soon .card-icon{font-size:3.5rem;opacity:0.3}
@@ -183,6 +189,21 @@ pointer-events:none;z-index:0}
       <div class="card-body">
         <div class="card-title">Flood <span class="card-tag tag-puzzle">Puzzle</span></div>
         <div class="card-desc">Pick colors to flood the board from the corner. Fill every tile in the fewest moves. 3 board sizes, endless levels.</div>
+        <div class="card-play">
+          Play now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- Stack Tower -->
+    <a href="https://froogooofficial.github.io/stack-tower/" class="game-card">
+      <div class="card-visual stack">
+        <div class="card-icon">🏗️</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Stack Tower <span class="card-tag tag-timing">Timing</span></div>
+        <div class="card-desc">Blocks slide back and forth — tap to drop and stack. Overhang gets cut off. How high can you go?</div>
         <div class="card-play">
           Play now
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
